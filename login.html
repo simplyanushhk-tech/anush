@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Login Page</title>
+<style>
+  body {
+    background-color: #ffe6f0;
+    font-family: Arial;
+    text-align: center;
+    padding-top: 80px;
+  }
+
+  .box {
+    background-color: white;
+    width: 280px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 2px 2px 10px gray;
+  }
+
+  img {
+    width: 70px;
+  }
+
+  input {
+    width: 90%;
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid pink;
+    border-radius: 6px;
+  }
+
+  button {
+    width: 95%;
+    padding: 10px;
+    background-color: hotpink;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+  }
+</style>
+</head>
+<body>
+
+  <div class="box">
+    <img src="https://cdn-icons-png.flaticon.com/512/747/747376.png">
+    <h2>Login</h2>
+
+    <input type="text" id="userId" placeholder="Enter ID">
+    <br>
+    <input type="password" id="userPass" placeholder="Enter Password">
+    <br>
+    <button onclick="checkLogin()">Login</button>
+  </div>
+
+  <script>
+    function checkLogin() {
+      var id = document.getElementById("userId").value;
+      var pass = document.getElementById("userPass").value;
+
+      if (id == "admin" && pass == "1234") {
+        alert("Login successful!");
+      } else {
+        alert("Wrong ID or Password");
+      }
+    }
+  </script>
+
+</body>
+</html>
